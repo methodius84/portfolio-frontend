@@ -6,7 +6,7 @@ import GitHubIcon from "@/components/icons/GitHubIcon.vue";
   <div class="header">
     <div class="title">
       <GitHubIcon/>
-      @methodius84
+      <h2>@methodius84</h2>
     </div>
     <nav class="nav">
       <router-link to="/">Home</router-link>

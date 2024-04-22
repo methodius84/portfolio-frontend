@@ -1,5 +1,52 @@
 @import "variables"
 
-@media (min-width: 1230px)
-  .skills-wrapper
-    float: none
+.about-wrapper
+  position: relative
+  height: 100dvh
+  background-image: url("../assets/images/girl-background.png")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  .about
+    padding: 72px 45px 0
+    position: relative
+    .about-title
+      display: flex
+      justify-content: center
+      color: $primary-h-text-color
+    .container
+      margin-top: 150px
+      display: flex
+      flex-direction: column
+      overflow: visible
+      .proficiencies
+        margin-top: 46px
+        color: $primary-h3-text-color
+      .proficiencies-text
+        text-align: left
+        color: $primary-paragraph-small-text2
+        width: 200px
+        display: flex
+        flex-wrap: wrap
+      .skills
+        perspective: 300px
+        .skills-title
+          display: flex
+          justify-content: end
+          margin-right: 28%
+        .skill-list
+          max-width: 400px
+          background-color: rgba($background-3, 0.4)
+          margin-top: 40px
+          margin-right: 10%
+          padding: 0.75em
+          border: 5px solid white
+          border-radius: 7px
+          transition: 0.7s ease-in
+          .list
+            list-style-type: '👉'
+            li
+              font-weight: 500
+              padding-inline: 1ch
+        .skill-list:hover
+          rotate: y -15deg
