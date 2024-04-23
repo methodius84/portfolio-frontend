@@ -3,6 +3,12 @@
 @import "about-view"
 @import "fonts"
 @import "adaptive-design"
+@import "mixin"
+
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
 
 body
   position: relative
@@ -12,23 +18,75 @@ body
   margin: 0
   font-family: 'MartianMono', sans-serif
   font-size: 10px
-  .header
-    padding: 0 100px 0
+  line-height: 1.3
+  overflow-x: hidden
+.header
+  &__top
+    background-color: $background-primary
+    height: $header-height
+    padding: 5px 0
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 3
+    width: 100%
     display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    justify-content: space-between
     align-items: center
-    .title
+    &__title
+      width: 100%
       display: flex
+      justify-content: space-between
       align-items: center
+      @include for-size(tablet-portrait-up)
+        justify-content: start
+
+      .toggle-nav
+        display: inline
+        border: 0
+        background-color: transparent
+        padding: 0
+        margin-left: auto
+        @include for-size(tablet-portrait-up)
+          display: none
+        img
+          width: 24px
+          height: 24px
+          vertical-align: middle
     .nav
-      display: flex
-      align-items: center
-      justify-content: center
-      a
-        margin: 5px
-        padding: 5px
+      display: none
+      background-color: $background-primary
+      position: absolute
+      top: 40px
+      right: 0
+      left: 0
+      margin: auto
+      width: calc(100% - $gap)
+      z-index: 10
+      @include for-size(tablet-portrait-up)
+        top: 0
+        right: 0
+        display: flex
+        position: relative
+        background-color: transparent
+        justify-content: end
+      &__item
+        color: $primary-text-color
+        display: block
+        padding: 5px 0
+        text-align: center
+        text-decoration: none
+        @include for-size(tablet-portrait-up)
+          display: inline
+          padding: 5px
+      &__item:hover
+        background-color: $primary-text-color
+        color: $alternative-secondary-text-color
+        transition: .3s ease-in-out
+        @include for-size(tablet-portrait-up)
+          transition: .5s ease-in-out
+      &.opened
+        display: grid
+
   #app
     position: relative
   h1, h2

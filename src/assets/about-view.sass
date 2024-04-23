@@ -8,7 +8,7 @@
   background-size: cover
   background-position: center center
   .about
-    padding: 72px 45px 0
+    padding: 78px 45px 0
     position: relative
     .about-title
       display: flex
@@ -16,8 +16,6 @@
       color: $primary-h-text-color
     .container
       margin-top: 150px
-      display: flex
-      flex-direction: column
       overflow: visible
       .proficiencies
         margin-top: 46px
@@ -50,3 +48,8 @@
               padding-inline: 1ch
         .skill-list:hover
           rotate: y -15deg
+
+
+@media (min-width: 493px)
+  .container
+    flex-direction: row
