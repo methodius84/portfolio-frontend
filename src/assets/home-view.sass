@@ -1,25 +1,51 @@
 @import "variables"
+@import "mixin"
 
-.section-title
-  position: relative
-  width: 100%
-  margin-left: 80px
-  display: flex
-  flex-direction: row
-  .description
-    margin-top: 158px
-    width: 32%
-    .description-title
-      color: $primary-h-text-color
-    .description-text
-      color: $primary-paragraph-text
-    .discover-button
-      margin-top: 60px
-      width: 266px
-      height: 47px
-      font-size: 18px
-      display: flex
-    .discover-annotation
-      color: $primary-paragraph-small-text
-      height: 18px
-      font-size: 15px
+.home-wrapper
+  height: 100dvh
+  .container
+    @include for-size(tablet-portrait-up)
+      margin-left: 80px
+      font-size: 1.2em
+      line-height: 1.2em
+    @include for-size(tablet-landscape-up)
+      font-size: 1.4em
+      line-height: 1.4em
+    @include for-size(desktop-up)
+      font-size: 1.8em
+      line-height: 1.8em
+    .description
+      margin-top: 158px
+      width: 100%
+      display: block
+      @include for-size(tablet-portrait-up)
+        width: 40%
+      .description-title
+        text-align: center
+        color: $primary-h-text-color
+        @include for-size(tablet-portrait-up)
+          text-align: left
+      .description-text
+        margin-top: 4em
+        text-align: justify
+        color: $primary-paragraph-text
+        @include for-size(tablet-portrait-up)
+          text-align: left
+      .description-actions
+        display: flex
+        align-items: center
+        flex-direction: column
+        max-width: 30em
+        @include for-size(tablet-portrait-up)
+          align-items: flex-start
+        .discover-button
+          margin-top: 60px
+          width: 266px
+          height: 47px
+          font-size: 18px
+          display: flex
+          align-items: center
+        .discover-annotation
+          color: $primary-paragraph-small-text
+          height: 18px
+          font-size: 15px

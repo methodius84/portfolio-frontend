@@ -1,55 +1,107 @@
 @import "variables"
+@import "mixin"
 
-.about-wrapper
+.about-page-wrapper
   position: relative
-  height: 100dvh
-  background-image: url("../assets/images/girl-background.png")
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center center
   .about
-    padding: 78px 45px 0
+    @include for-size(tablet-portrait-up)
+      font-size: 1.2em
+      line-height: 1.2em
+    @include for-size(tablet-landscape-up)
+      font-size: 1.4em
+      line-height: 1.4em
+    @include for-size(desktop-up)
+      font-size: 1.6em
+      line-height: 1.6em
+    min-height: 100dvh
+    background-image: url("../assets/images/girl-background.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    padding: 78px 0
     position: relative
     .about-title
       display: flex
       justify-content: center
       color: $primary-h-text-color
     .container
-      margin-top: 150px
-      overflow: visible
+      margin-top: 46px
+      display: block
       .proficiencies
-        margin-top: 46px
+        margin: 5em 1.5em
+        display: block
         color: $primary-h3-text-color
-      .proficiencies-text
-        text-align: left
-        color: $primary-paragraph-small-text2
-        width: 200px
-        display: flex
-        flex-wrap: wrap
+        @include for-size(tablet-portrait-up)
+          margin: 6em 14em
+        .proficiencies-text
+          margin-top: 15px
+          text-align: left
+          color: $primary-paragraph-small-text2
+          width: 100%
+          max-width: 20em
       .skills
         perspective: 300px
+        display: block
         .skills-title
           display: flex
           justify-content: end
-          margin-right: 28%
+          margin-left: auto
+          margin-right: 20%
+          @include for-size(phone-only)
+            margin-right: 5%
         .skill-list
-          max-width: 400px
+          max-width: 30em
           background-color: rgba($background-3, 0.4)
           margin-top: 40px
+          margin-left: auto
           margin-right: 10%
-          padding: 0.75em
+          padding: 2em
           border: 5px solid white
           border-radius: 7px
-          transition: 0.7s ease-in
+          transition: 1.5s ease-in
+          @include for-size(phone-only)
+            margin-right: 0
           .list
             list-style-type: '👉'
             li
               font-weight: 500
               padding-inline: 1ch
         .skill-list:hover
-          rotate: y -15deg
-
-
-@media (min-width: 493px)
-  .container
-    flex-direction: row
+          font-size: 1.5em
+          line-height: 1.6em
+          rotate: 1 1 0 7.5deg
+  .about__benefits
+    min-height: 60em
+    height: 100%
+    position: relative
+    display: block
+    background-color: $background-secondary
+    .section-gap
+      height: auto
+      background: #FFFFFF
+    .container
+      padding-top: 12.5em
+      height: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-evenly
+      .benefit
+        flex: 0
+        max-height: 400px
+        height: 100%
+        padding: 3em
+        display: block
+        &__img
+          display: block
+          height: auto
+          max-width: 25em
+        &__text
+          display: block
+          font-size: 1.4em
+          color: $primary-paragraph-small-text3
+          margin-top: 0.5em
+          max-height: 7em
+          width: auto
+          padding: 1em
+          @include for-size(desktop-up)
+            margin-top: 2em

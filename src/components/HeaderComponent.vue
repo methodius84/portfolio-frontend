@@ -13,7 +13,7 @@ const toggleMenu = () => {
       <div class="container-wide">
         <div class="header__top__title">
           <GitHubIcon/>
-          <h2>@methodius84</h2>
+          <h2><a href="https://github.com/methodius84" target="_blank">@methodius84</a></h2>
           <button class="toggle-nav" @click="toggleMenu" aria-controls="nav" aria-expanded="false"><img src="../assets/icons/menu.svg" alt="меню"/></button>
         </div>
         <nav class="nav" id="nav">
