@@ -11,7 +11,9 @@
       </div>
       <div class="benefit">
         <img class="benefit__img" src="../assets/images/image-boy1.png" alt="Image" v-scroll-animation/>
-        <span class="benefit__text" v-scroll-animation>As an ex-security operations engineer, I really care about data safety</span>
+        <span class="benefit__text" v-scroll-animation>
+          As an ex-security operations engineer, I really care about data safety
+        </span>
       </div>
       <div class="benefit">
         <img class="benefit__img" src="../assets/images/image-girl1.png" alt="Image" v-scroll-animation/>
@@ -19,7 +21,9 @@
       </div>
       <div class="benefit">
         <img class="benefit__img" src="../assets/images/image-boy1.png" alt="Image" v-scroll-animation/>
-        <span class="benefit__text" v-scroll-animation>asdgdayovdasphadphsdb</span>
+        <span class="benefit__text" v-scroll-animation>
+          My main goal is to become a high-level specialist in back-end and self-sufficient programmer
+        </span>
       </div>
     </div>
   </div>
